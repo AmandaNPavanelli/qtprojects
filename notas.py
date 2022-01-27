@@ -1,5 +1,10 @@
 # -*- coding: utf-8 -*-
+######################################################################
+### Amanda Pavanelli - UNIS/S.I. - SSA, BA, Brasil - Jan. 2022 
+######################################################################
+### Importando os modulos necessarios
 from PyQt5 import QtCore, QtGui, QtWidgets
+######################################################################
 
 ### Função da janela principal 
 class Ui_MainWindow(object):
