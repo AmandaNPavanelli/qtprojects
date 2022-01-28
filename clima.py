@@ -30,9 +30,9 @@ class Ui_MainWindow(object):
         self.pushButton_3.setGeometry(QtCore.QRect(590, 140, 91, 41))
         self.pushButton_3.setObjectName("pushButton_3")
 ### Line Edit 2 - Campo para digitar o valor 
-        self.lineEdit_2 = QtWidgets.QLineEdit(self.centralwidget)
-        self.lineEdit_2.setGeometry(QtCore.QRect(210, 20, 113, 41))
-        self.lineEdit_2.setObjectName("lineEdit_2")
+        self.lineEdit = QtWidgets.QLineEdit(self.centralwidget)
+        self.lineEdit.setGeometry(QtCore.QRect(210, 20, 113, 41))
+        self.lineEdit.setObjectName("lineEdit")
 ##############################################################################        
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
@@ -48,12 +48,12 @@ class Ui_MainWindow(object):
         self.retranslateUi(MainWindow)
         self.pushButton_2.clicked.connect(self.textEdit.clear)
         self.pushButton_3.clicked.connect(MainWindow.close)
-        self.pushButton_2.clicked.connect(self.lineEdit_2.clear)
+        self.pushButton_2.clicked.connect(self.lineEdit.clear)
         self.pushButton.clicked.connect(self.tempo)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 ### Funções 
     def tempo(self):
-       temp = self.lineEdit_2.text()
+       temp = self.lineEdit.text()
        temp = float(temp)
        if (35 > temp > 30):
          self.textEdit.setText('Está muito quente, fique em casa por favor!')
